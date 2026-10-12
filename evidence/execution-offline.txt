@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.0.2, pluggy-1.6.0 -- /opt/pyvenv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.5', 'Platform': 'Linux-6.18.44-x86_64-with-glibc2.41', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.13.0', 'ddtrace': '4.4.0', 'Faker': '40.1.2', 'asyncio': '1.3.0', 'cov': '7.0.0', 'json-report': '1.5.0', 'metadata': '3.1.1'}, 'PLATFORM': 'linux/amd64', 'CI': 'true'}
+rootdir: /mnt/data/serverest-genai-api
+configfile: pytest.ini
+plugins: anyio-4.13.0, ddtrace-4.4.0, Faker-40.1.2, asyncio-1.3.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 36 items
+
+tests/test_live_api.py::test_api_01_login_valido SKIPPED (Integração...) [  2%]
+tests/test_live_api.py::test_api_02_login_invalido SKIPPED (Integraç...) [  5%]
+tests/test_live_api.py::test_api_03_login_payload_invalido[body0] SKIPPED [  8%]
+tests/test_live_api.py::test_api_03_login_payload_invalido[body1] SKIPPED [ 11%]
+tests/test_live_api.py::test_api_03_login_payload_invalido[body2] SKIPPED [ 13%]
+tests/test_live_api.py::test_api_04_usuario_criar_consultar SKIPPED      [ 16%]
+tests/test_live_api.py::test_api_05_email_duplicado SKIPPED (Integra...) [ 19%]
+tests/test_live_api.py::test_api_06_usuarios_listagem_filtro SKIPPED     [ 22%]
+tests/test_live_api.py::test_api_07_usuario_put SKIPPED (Integração ...) [ 25%]
+tests/test_live_api.py::test_api_08_usuario_exclusao SKIPPED (Integr...) [ 27%]
+tests/test_live_api.py::test_api_09_usuario_tipo_invalido SKIPPED (I...) [ 30%]
+tests/test_live_api.py::test_api_10_produto_admin SKIPPED (Integraçã...) [ 33%]
+tests/test_live_api.py::test_api_11_produto_sem_permissao[POST] SKIPPED  [ 36%]
+tests/test_live_api.py::test_api_11_produto_sem_permissao[PUT] SKIPPED   [ 38%]
+tests/test_live_api.py::test_api_11_produto_sem_permissao[DELETE] SKIPPED [ 41%]
+tests/test_live_api.py::test_api_12_produto_duplicado SKIPPED (Integ...) [ 44%]
+tests/test_live_api.py::test_api_13_produto_filtros SKIPPED (Integra...) [ 47%]
+tests/test_live_api.py::test_api_14_produto_put SKIPPED (Integração ...) [ 50%]
+tests/test_live_api.py::test_api_15_produto_delete SKIPPED (Integraç...) [ 52%]
+tests/test_live_api.py::test_api_16_carrinho_estoque_reduzido SKIPPED    [ 55%]
+tests/test_live_api.py::test_api_17_carrinho_unico SKIPPED (Integraç...) [ 58%]
+tests/test_live_api.py::test_api_18_carrinho_invalido[NAO_EXISTE_123-1] SKIPPED [ 61%]
+tests/test_live_api.py::test_api_18_carrinho_invalido[{product}-999999] SKIPPED [ 63%]
+tests/test_live_api.py::test_api_19_concluir_sem_repor SKIPPED (Inte...) [ 66%]
+tests/test_live_api.py::test_api_20_cancelar_repor SKIPPED (Integraç...) [ 69%]
+tests/test_live_api.py::test_api_21_carrinho_sem_token[headers0] SKIPPED [ 72%]
+tests/test_live_api.py::test_api_21_carrinho_sem_token[headers1] SKIPPED [ 75%]
+tests/test_live_api.py::test_api_22_carrinhos_listar SKIPPED (Integr...) [ 77%]
+tests/test_live_api.py::test_api_23_produto_id_inexistente SKIPPED (...) [ 80%]
+tests/test_live_api.py::test_api_24_carrinho_sem_compra SKIPPED (Int...) [ 83%]
+tests/test_local_validation.py::test_client_url_timeout PASSED           [ 86%]
+tests/test_local_validation.py::test_user_payload_and_unique_email PASSED [ 88%]
+tests/test_local_validation.py::test_login_bearer PASSED                 [ 91%]
+tests/test_local_validation.py::test_login_rejeita_token_sem_bearer PASSED [ 94%]
+tests/test_local_validation.py::test_produto_payload_quantidade PASSED   [ 97%]
+tests/test_local_validation.py::test_cadastro_falha_visivel PASSED       [100%]
+
+- generated xml file: /mnt/data/serverest-genai-api/evidence/junit-offline.xml -
+=========================== short test summary info ============================
+SKIPPED [20] tests/test_live_api.py: Integração externa desativada: use --run-live
+SKIPPED [3] tests/test_live_api.py:22: Integração externa desativada: use --run-live
+SKIPPED [3] tests/test_live_api.py:78: Integração externa desativada: use --run-live
+SKIPPED [2] tests/test_live_api.py:131: Integração externa desativada: use --run-live
+SKIPPED [2] tests/test_live_api.py:158: Integração externa desativada: use --run-live
+======================== 6 passed, 30 skipped in 0.10s =========================
